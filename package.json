@@ -24,19 +24,33 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "webpack-dev-server -d --config webpack.config.js",
+    "watch": "webpack -progress --watch",
+    "prod": "webpack -p",
+    "test": "jest"
+  },
   "prettier": {
     "singleQuote": true
   },
   "babel": {
-    "presets": ["es2015", "react"],
-    "plugins": ["transform-object-rest-spread"]
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
-  "eslintIgnore": ["node_modules"],
+  "eslintIgnore": [
+    "node_modules"
+  ],
   "eslintConfig": {
     "env": {
       "es6": true,
@@ -49,7 +63,11 @@
       "prettier",
       "prettier/react"
     ],
-    "plugins": ["json", "react", "prettier"],
+    "plugins": [
+      "json",
+      "react",
+      "prettier"
+    ],
     "parserOptions": {
       "ecmaFeatures": {
         "experimentalObjectRestSpread": true,
@@ -59,7 +77,10 @@
       "sourceType": "module"
     },
     "settings": {
-      "propWrapperFunctions": ["strictPropTypes", "strictPropTypes.allRequired"]
+      "propWrapperFunctions": [
+        "strictPropTypes",
+        "strictPropTypes.allRequired"
+      ]
     },
     "rules": {
       "prettier/prettier": "error",
@@ -77,7 +98,10 @@
       ],
       "no-var": "error",
       "prefer-const": "error",
-      "semi": ["error", "always"],
+      "semi": [
+        "error",
+        "always"
+      ],
       "react/jsx-no-bind": "error",
       "react/no-did-update-set-state": "error",
       "react/no-unused-prop-types": "error",
