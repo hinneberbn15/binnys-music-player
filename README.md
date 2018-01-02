@@ -1,1 +1,1 @@
-# Binny's Music Player
+# react-boilerplate
