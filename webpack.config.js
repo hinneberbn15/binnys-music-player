@@ -31,6 +31,11 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
+        test: /\.(eot|svg|ttf|woff)$/,
+        include: /(\/|\\)fonts(\/|\\)/,
+        use: { loader: 'file-loader' }
+      },
+      {
         test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader',
